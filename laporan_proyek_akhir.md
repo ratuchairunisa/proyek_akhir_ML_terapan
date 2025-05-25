@@ -91,7 +91,9 @@ Dataset ini kaya akan fitur yang dapat dimanfaatkan untuk berbagai teknik rekome
 ![Top 10 Penulis Terpopuler](image/top_10_fav_authors.png)
 ![Top 10 Genre Terpopuler](image/top_10_fav_genre.png)
 
-* **Word Cloud dari Deskripsi Buku**: dibuat untuk menemukan kata kunci yang sering muncul dalam deskripsi buku.
+* **Word Cloud dari Deskripsi Buku**: dibuat untuk menemukan kata kunci yang sering muncul dalam deskripsi buku, seperti yang terlihat kata-kata umum yang sering muncul dalam deskripsi adalah 'life', 'one', 'book', 'novel', 'world', 'stroynew', 'work'.
+  
+![Top 10 Genre Terpopuler](image/word_cloud.png)
 
 ## Data Preparation
 
