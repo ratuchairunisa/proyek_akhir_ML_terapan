@@ -22,7 +22,7 @@ Peran sistem rekomendasi dalam membantu pengguna menavigasi informasi dan produk
 Lebih lanjut, *Rajpurkar et al. menekankan bahwa inti dari setiap sistem rekomendasi adalah dua entitas utama, yaitu pengguna dan item. Dalam konteks ini, algoritma rekomendasi bekerja dengan menggunakan data pelanggan dan data buku untuk menghasilkan saran bacaan yang sesuai. Studi mereka juga menegaskan pentingnya sistem rekomendasi dalam meningkatkan profitabilitas dan retensi pembeli, terutama dalam persaingan pasar buku online. Pendekatan yang mereka tawarkan menggabungkan teknik content-based filtering, collaborative filtering, dan association rule mining, untuk menghasilkan rekomendasi buku yang efisien dan efektif. Temuan ini memperkuat urgensi pengembangan sistem rekomendasi yang mengintegrasikan berbagai teknik guna mengatasi kompleksitas data dan preferensi pengguna, serta meningkatkan akurasi dalam memberikan rekomendasi yang relevan*.
 
 **Referensi:**
-Rajpurkar, S., Bhatt, D., Malhotra, P., Jha, A., & Dhir, A. (2015). Book Recommendation System. International Journal for Innovative Research in Science & Technology (IJIRST).
+Rajpurkar, S., Bhatt, D., Malhotra, P., Jha, A., & Dhir, A. (2015). **Book Recommendation System**. *International Journal for Innovative Research in Science & Technology (IJIRST)*.
 
 ## Business Understanding
 
