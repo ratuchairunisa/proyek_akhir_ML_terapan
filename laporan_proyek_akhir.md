@@ -113,24 +113,31 @@ Pada tahap persiapan data, beberapa teknik utama yang diterapkan untuk memastika
 **Handling Outliers**: Outlier diatasi dengan teknik capping (winsorized) menggunakan metode IQR (Interquartile Range). Artinya, nilai-nilai ekstrem (outliers) tidak dihapus, tetapi dibatasi (dibatasi atas dan bawah) pada ambang batas yang wajar berdasarkan distribusi data. Teknik ini digunakan untuk mengurangi pengaruh outliers yang ekstrem, menjaga data tetap utuh, menstabilkan distribusi data, dan meningkatkan kerja model.
 
 **Text Preprocessing (untuk Content-Based Filtering)**: dalam melakukan teks processing, dilakukan beberapa teknik berikut
+
 **1. Lowercasing (Konversi ke huruf kecil):**
 * Mengubah semua huruf menjadi huruf kecil (text.lower()).
 * Tujuan: Agar kata seperti "Book" dan "book" dianggap sama (konsistensi kata).
+  
 **2. Punctuation Removal (Menghapus tanda baca):**
 * Menghapus semua tanda baca (string.punctuation).
 * Tujuan: Tanda baca biasanya tidak memberi makna penting dalam analisis teks (kecuali di NLP tingkat lanjut seperti analisis sentimen berbasis tanda baca).
+  
 **3. Digit Removal (Menghapus angka):**
 * Menghapus semua angka (re.sub(r'\d+', '', text)).
 * Tujuan: Angka umumnya tidak relevan dalam pemahaman makna konten buku, kecuali di domain tertentu.
+  
 **4. Tokenization:**
 * Memecah teks menjadi daftar kata-kata (token) menggunakan nltk.word_tokenize().
 * Tujuan: Agar teks bisa diproses secara individual kata demi kata (untuk filtering, stemming, dsb).
-5. Stopword Removal:
+  
+5. **Stopword Removal:**
 * Menghapus kata-kata umum yang tidak membawa makna penting (seperti “the”, “is”, “and”) menggunakan stop_words.
 * Tujuan: Mengurangi noise atau kata-kata yang tidak berkontribusi pada makna inti dokumen.
+  
 **6. Stemming (Porter Stemmer):**
 * Mengubah kata ke bentuk dasarnya (contoh: reading → read).
 * Tujuan: Menyatukan kata dengan akar yang sama agar dianggap satu makna. Ini penting untuk menghindari redundansi kata turunan.
+  
 **7. Rejoining:**
 * Menggabungkan kembali token menjadi satu string (' '.join()).
 * Tujuan: Agar data siap digunakan untuk proses selanjutnya, misalnya vectorization.
@@ -148,7 +155,9 @@ Untuk mencapai tujuan ini, akan disajikan dan mengimplementasikan dua solusi rek
 
 Sistem rekomendasi yang dibangun agar sistem secara otomatis dan efisien menyarankan buku-buku yang paling mungkin sesuai dengan preferensi pengguna. 
 Pendekatan yang dilakukan dalam proyek ini adalah memprediksi atau mengidentifikasi buku-buku yang paling relevan bagi seorang pengguna berdasarkan dua sudut pandang:
+
 * **Dari perspektif buku itu sendiri (Content-Based Filtering):** Jika Anda menyukai buku dengan fitur X, Y, Z, maka sistem akan merekomendasikan buku lain yang juga memiliki fitur X, Y, Z.
+  
 * **Dari perspektif interaksi pengguna lain (Collaborative Filtering):** Jika Anda memiliki selera baca yang mirip dengan orang lain, maka sistem akan merekomendasikan buku yang disukai oleh orang lain tersebut, meskipun Anda belum pernah membaca buku dengan fitur serupa.
 Kombinasi dan perbandingan kedua perspektif ini memberikan wawasan mendalam tentang cara terbaik untuk memenuhi kebutuhan pengguna.
 
