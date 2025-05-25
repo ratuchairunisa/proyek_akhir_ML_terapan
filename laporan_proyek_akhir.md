@@ -109,25 +109,25 @@ Pada tahap persiapan data, beberapa teknik utama yang diterapkan untuk memastika
 **Handling Outliers**: Outlier diatasi dengan teknik capping (winsorized) menggunakan metode IQR (Interquartile Range). Artinya, nilai-nilai ekstrem (outliers) tidak dihapus, tetapi dibatasi (dibatasi atas dan bawah) pada ambang batas yang wajar berdasarkan distribusi data. Teknik ini digunakan untuk mengurangi pengaruh outliers yang ekstrem, menjaga data tetap utuh, menstabilkan distribusi data, dan meningkatkan kerja model.
 
 **Text Preprocessing (untuk Content-Based Filtering)**: dalam melakukan teks processing, dilakukan beberapa teknik berikut
-1. Lowercasing (Konversi ke huruf kecil):
+**1. Lowercasing (Konversi ke huruf kecil):**
 * Mengubah semua huruf menjadi huruf kecil (text.lower()).
 * Tujuan: Agar kata seperti "Book" dan "book" dianggap sama (konsistensi kata).
-2. Punctuation Removal (Menghapus tanda baca):
+**2. Punctuation Removal (Menghapus tanda baca):**
 * Menghapus semua tanda baca (string.punctuation).
 * Tujuan: Tanda baca biasanya tidak memberi makna penting dalam analisis teks (kecuali di NLP tingkat lanjut seperti analisis sentimen berbasis tanda baca).
-3. Digit Removal (Menghapus angka):
+**3. Digit Removal (Menghapus angka):**
 * Menghapus semua angka (re.sub(r'\d+', '', text)).
 * Tujuan: Angka umumnya tidak relevan dalam pemahaman makna konten buku, kecuali di domain tertentu.
-4. Tokenization:
+**4. Tokenization:**
 * Memecah teks menjadi daftar kata-kata (token) menggunakan nltk.word_tokenize().
 * Tujuan: Agar teks bisa diproses secara individual kata demi kata (untuk filtering, stemming, dsb).
 5. Stopword Removal:
 * Menghapus kata-kata umum yang tidak membawa makna penting (seperti “the”, “is”, “and”) menggunakan stop_words.
 * Tujuan: Mengurangi noise atau kata-kata yang tidak berkontribusi pada makna inti dokumen.
-6. Stemming (Porter Stemmer):
+**6. Stemming (Porter Stemmer):**
 * Mengubah kata ke bentuk dasarnya (contoh: reading → read).
 * Tujuan: Menyatukan kata dengan akar yang sama agar dianggap satu makna. Ini penting untuk menghindari redundansi kata turunan.
-7. Rejoining:
+**7. Rejoining:**
 * Menggabungkan kembali token menjadi satu string (' '.join()).
 * Tujuan: Agar data siap digunakan untuk proses selanjutnya, misalnya vectorization.
 
