@@ -88,7 +88,7 @@ Dataset ini kaya akan fitur yang dapat dimanfaatkan untuk berbagai teknik rekome
 * **Bar Chart Top 10 Buku**: menampilkan top 10 buku berdasarkan rata-rata rating tertinggi dan ulasan terbanyak
 * **Bar Chart Top 10 author dan genre terpopuler**: untuk mengetahui top 10 penulis dan genre buku paling populer. 
 
-![Top 10 Penulis Terpopuler](images\top_10_fav_authors.png)
+![Top 10 Penulis Terpopuler](image/top_10_fav_authors.png)
 
 ![Top 10 Genre Terpopuler](images\top_10_fav_genre.png)
 
