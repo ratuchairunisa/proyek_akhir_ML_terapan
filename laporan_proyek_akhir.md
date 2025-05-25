@@ -3,17 +3,20 @@
 ## Project Overview
 
 **Latar Belakang**
+
 Di era digital saat ini, ledakan informasi telah mengubah cara kita berinteraksi dengan berbagai jenis konten, termasuk buku. Dengan jutaan judul buku yang tersedia di berbagai platform daring, mencari bacaan yang sesuai dengan selera pribadi dapat menjadi tugas yang melelahkan dan memakan waktu. Fenomena ini semakin diperparah dengan pertumbuhan pesat e-commerce dan platform literasi digital, di mana pengguna dihadapkan pada pilihan yang tak terbatas. Dalam konteks ini, sistem rekomendasi menjadi solusi krusial yang menjembatani kesenjangan antara ketersediaan buku yang melimpah dan kebutuhan pengguna untuk menemukan konten yang relevan dan menarik.
 
 Persis dengan bagaimana sistem rekomendasi telah merevolusi pengalaman belanja online dan konsumsi media, penerapannya dalam domain buku menawarkan potensi yang besar. Sistem ini mampu mengidentifikasi pola preferensi dari data historis pengguna, seperti buku yang telah dibaca, diberi rating, atau diulas, untuk kemudian menyarankan judul-judul baru yang memiliki kemungkinan besar untuk disukai pengguna. Tanpa bantuan sistem ini, pengguna mungkin akan terpaku pada judul-judul populer atau rekomendasi yang didasarkan pada daftar terlaris umum, sehingga kehilangan kesempatan untuk mengeksplorasi niche atau menemukan "permata tersembunyi" yang sangat cocok dengan minat mereka.
 
 **Lalu, Menurut Kalian Mengapa Proyek Ini Penting?**
+
 Proyek ini sangat penting untuk dilaksanakan karena ada beberapa alasan utama:
 - **Meningkatkan Pengalaman Pengguna**: Tujuan utama sistem rekomendasi adalah meningkatkan kepuasan pengguna dengan menyediakan rekomendasi yang personal dan relevan. Dengan sistem ini, pembaca dapat menghemat waktu dalam mencari buku, mengurangi kesulitan dalam memilih karena terdapat banyak pilihan, dan lebih sering menemukan bacaan yang benar-benar bisa dinikmati, yang pada akhirnya akan memperkaya pengalaman literasi mereka.
 - **Mendukung Industri Buku**: Bagi platform e-commerce buku atau perpustakaan digital, sistem rekomendasi yang efektif dapat secara signifikan meningkatkan tingkat penjualan. Rekomendasi yang tepat bukan hanya mendorong pembelian berulang tetapi juga memperkenalkan pengguna pada berbagai judul dari penulis yang kurang dikenal atau genre yang mungkin belum pernah mereka jelajahi. Hal ini berkontribusi pada diversifikasi pasar dan mendukung ekosistem penerbitan yang lebih luas.
 - **Mengatasi Tantangan Data**: Dataset buku, terutama dari platform literasi digital, seringkali menghadapi tantangan unik seperti halnya pengguna yang hanya membaca sebagian kecil buku yang ada dan masalah bagaimana merekomendasikan buku kepada pengguna baru atau buku baru. Proyek ini penting untuk mengeksplorasi dan menerapkan solusi inovatif, termasuk penggunaan teknik **Collaborative Filtering** dan **Content-Based Filtering**, untuk mengatasi tantangan ini dan menghasilkan rekomendasi yang akurat.
 
 **Hasil Riset dan Artikel Relevan**:
+
 Peran krusial sistem rekomendasi dalam membantu pengguna menavigasi jutaan bahkan milyaran informasi dan produk telah diakui luas, termasuk dalam domain buku. Sebagaimana dijelaskan oleh S. Rajpurkar, D. Bhatt, P. Malhotra, et al. dalam artikel mereka "Book Recommendation System" (2015):
 `Sistem rekomendasi berevolusi sebagai algoritma cerdas, yang dapat memberikan hasil berupa rekomendasi kepada pengguna. Sistem ini mengurangi biaya yang terkait dengan membuat pilihan terbaik di antara banyak pilihan. Sekarang, sistem Rekomendasi dapat diimplementasikan dalam domain apa pun mulai dari E-commerce hingga keamanan jaringan dalam bentuk layanan yang dipersonalisasi. Sistem ini memberikan manfaat bagi baik konsumen maupun produsen, dengan menyarankan barang kepada konsumen, yang tidak dapat diminta sampai rekomendasi [1].`
 Mereka lebih lanjut menjelaskan bahwa setiap sistem rekomendasi berpusat pada dua entitas: pengguna dan item. Dalam konteks proyek ini, input untuk algoritma rekomendasi terdiri dari basis data pelanggan (pengguna) dan basis data buku (item), dengan output berupa rekomendasi buku.
@@ -98,6 +101,7 @@ Dataset ini kaya akan fitur yang dapat dimanfaatkan untuk berbagai teknik rekome
 ## Data Preparation
 
 Pada tahap persiapan data, beberapa teknik utama yang diterapkan untuk memastikan kualitas dan kelayakan data sebelum digunakan dalam pemodelan sistem rekomendasi adalah sebagai berikut:
+
 **Handling missing values**: menangani data yang hilang (missing data) pada beberapa kolom penting yang akan digunakan pada pemodelan, berikut teknik yang digunakan berdasarkan tipe datanya:
   * Kolom authors diatasi menggunakan teknik imputasi dengan menggantinya dengan 'Unknown Author', hal ini dilakukan agar pada kolom authors tidak terdapat data kosong.
   * Kolom categories diatasi menggunakan teknik imputasi dengan menggantinya dengan 'Uncategorized'.
@@ -141,6 +145,7 @@ Pada tahap modeling, tujuan utama adalah membangun sistem rekomendasi buku yang 
 Untuk mencapai tujuan ini, akan disajikan dan mengimplementasikan dua solusi rekomendasi dengan algoritma yang berbeda, yaitu **Content-Based Filtering** dan **Collaborative Filtering**.
 
 **1. Sistem Rekomendasi untuk Menyelesaikan Permasalahan**
+
 Sistem rekomendasi yang dibangun agar sistem secara otomatis dan efisien menyarankan buku-buku yang paling mungkin sesuai dengan preferensi pengguna. 
 Pendekatan yang dilakukan dalam proyek ini adalah memprediksi atau mengidentifikasi buku-buku yang paling relevan bagi seorang pengguna berdasarkan dua sudut pandang:
 * **Dari perspektif buku itu sendiri (Content-Based Filtering):** Jika Anda menyukai buku dengan fitur X, Y, Z, maka sistem akan merekomendasikan buku lain yang juga memiliki fitur X, Y, Z.
@@ -148,6 +153,7 @@ Pendekatan yang dilakukan dalam proyek ini adalah memprediksi atau mengidentifik
 Kombinasi dan perbandingan kedua perspektif ini memberikan wawasan mendalam tentang cara terbaik untuk memenuhi kebutuhan pengguna.
 
 **2. Top-N Recommendation**
+
 Output utama dari sistem rekomendasi ini adalah daftar *Top-N Recommendation*. Ini berarti, ketika seorang pengguna meminta rekomendasi atau sistem secara proaktif ingin menyarankan buku, ia akan menyajikan daftar N buku teratas yang paling diprediksi akan disukai atau relevan bagi pengguna tersebut.
 
 **Output Top-N Recommendation**
