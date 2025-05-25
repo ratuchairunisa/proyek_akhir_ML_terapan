@@ -76,15 +76,16 @@ Dataset ini dirancang untuk mendukung pengembangan sistem rekomendasi dan aplika
 
 Dataset ini kaya akan fitur yang dapat dimanfaatkan untuk berbagai teknik rekomendasi, berikut adalah fitur-fitur yang terdapat dalam dataset:
 - isbn13 (ISBN13): fitur ini merupakan kode identifikasi unik internasional versi 13 digit untuk sebuah buku, dimana ISBN digunakan untuk membedakan satu buku dari buku lainnya secara global.
-- isbn10 (ISBN10): fitur ini versi lama dari ISBN, hanya 10 digit. Namun, masih digunakan di beberapa tempat.
-- Judul (Title): nama/ judul lengkap buku, bisa digunakan dalam pencarian atau tampilan antarmuka pengguna.
-- Penulis (Author): nama penulis buku. Fitur kunci untuk rekomendasi berbasis konten dan pengelompokan.
-- Genre: Kategori atau jenis buku (misalnya, Fiksi, Fantasi, Sejarah). Sangat berguna untuk content-based filtering.
-- Tahun Penerbitan (Published Year): Tahun buku diterbitkan. Dapat menunjukkan tren atau relevansi waktu.
-- Sinopsis (Description): ringkasan alur cerita atau tema buku. Penting untuk analisis teks dan content-based filtering yang mendalam.
-- Average Rating: Skor atau nilai rata-rata yang diberikan pengguna pada buku.
-- Thumbnail (Images URL): tautan atau lokasi gambar sampul buku. Berguna untuk representasi visual dalam antarmuka pengguna.
-
+- **isbn10 (ISBN10):** fitur ini versi lama dari ISBN, hanya 10 digit. Namun, masih digunakan di beberapa tempat.
+- **Judul (Title):** nama/ judul lengkap buku, bisa digunakan dalam pencarian atau tampilan antarmuka pengguna.
+- **Penulis (Author):** nama penulis buku. Fitur kunci untuk rekomendasi berbasis konten dan pengelompokan.
+- **Genre/Categories:** Kategori atau jenis buku (misalnya, Fiksi, Fantasi, Sejarah). Sangat berguna untuk content-based filtering.
+- **Tahun Penerbitan (Published Year):** Tahun buku diterbitkan. Dapat menunjukkan tren atau relevansi waktu.
+- **Sinopsis (Description):** ringkasan alur cerita atau tema buku. Penting untuk analisis teks dan content-based filtering yang mendalam.
+- **Average Rating:** Skor atau nilai rata-rata yang diberikan pengguna pada buku.
+- **Thumbnail (Images URL):** tautan atau lokasi gambar sampul buku. Berguna untuk representasi visual dalam antarmuka pengguna.
+- **num_pages:** banyaknya halaman dari buku
+- 
 ### Exploratory Data Analysis
 **Visualisasi Data**:
 * **Histogram Rata-Rata Rating**: untuk melihat sebaran rating. Mayoritas rating berada di antara 3 hingga 5, menunjukkan sebagian besar pengguna memberikan ulasan positif.
