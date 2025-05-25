@@ -259,42 +259,29 @@ Meskipun demikian, **Content-Based Filtering** menunjukkan potensi dalam hal cak
 
 1. **Precision@N**
 * Formula:
-$$
-\text{Precision@K} = \frac{\text{Jumlah item relevan dalam K rekomendasi}}{\text{Jumlah total K rekomendasi}}
-$$
+Precision@N = Jumlah total item relevan dalam K rekomendasi / Jumlah total K rekomendasi
 * **Cara Kerja:** Metrik ini mengukur ketepatan rekomendasi. Untuk setiap pengguna, sistem menghasilkan daftar N rekomendasi teratas. Precision@N kemudian menghitung proporsi item dalam daftar tersebut yang benar-benar relevan bagi pengguna (yaitu, buku yang diberi rating tinggi oleh pengguna di data uji atau yang disukai berdasarkan kriteria relevansi lainnya). Nilai yang tinggi menunjukkan bahwa model sangat akurat dalam memberikan rekomendasi yang diinginkan, sehingga meningkatkan personalisasi dan kenyamanan pengguna.
 
 2. **Recall@N**
 * Formula:
-$$
-\text{Recall@K} = \frac{\text{Jumlah item relevan dalam K rekomendasi}}{\text{Jumlah total item relevan}}
-$$
+Recall@K = Jumlah total item relevan dalam K rekomendasi / Jumlah total item relevan
 * **Cara Kerja:** Metrik ini mengukur cakupan atau kelengkapan rekomendasi. Untuk setiap pengguna, Recall@N menghitung proporsi item relevan yang berhasil ditemukan oleh model dalam N rekomendasi teratas, dari semua item relevan yang sebenarnya tersedia untuk pengguna tersebut. Nilai yang tinggi menunjukkan bahwa model mampu menemukan sebagian besar item yang relevan, yang krusial untuk meningkatkan pengalaman pengguna dalam menemukan buku.
 
 3. **F1_Score@N**
-* Formula:
-$$
-\text{F1-Score@K} = \frac{2 \times \text{Precision@K} \times \text{Recall@K}}{\text{Precision@K} + \text{Recall@K}}
-$$
+* Formula:F1-Score@K = 2 × (Precision@K × Recall@K) / (Precision@K + Recall@K)
 * **Cara Kerja:** F1-Score adalah rata-rata harmonik dari Precision dan Recall. Metrik ini memberikan keseimbangan antara kedua metrik tersebut, sangat berguna ketika ada trade-off antara precision dan recall. Nilai F1-Score yang tinggi menunjukkan bahwa model memiliki performa yang baik dalam kedua aspek: **akurasi dan kelengkapan**. Ini menjadi metrik kunci untuk membandingkan performa dua pendekatan sistem rekomendasi secara komprehensif.
 
 4. **Mean Reciprocal Rank (MRR)**
 * Formula:
-$$
-\text{MRR} = \frac{1}{|U|} \sum_{u=1}^{|U|} \frac{1}{\text{rank}_u}
-$$
+MRR = (1 / |U|) × Σ (1 / rank_u)
 * **Cara Kerja:** MRR sangat relevan untuk skenario di mana urutan rekomendasi itu penting. Ia menghitung peringkat item relevan pertama untuk setiap pengguna, kemudian mengambil rata-rata kebalikannya. Semakin tinggi nilai MRR, semakin cepat (semakin di atas daftar) pengguna menemukan item yang relevan, yang secara langsung meningkatkan kenyamanan pengguna dalam menelusuri rekomendasi.
 
 5. **Hit Rate@N**
 * Formula:
-$$
-\text{HitRate@K} = \frac{\text{Jumlah pengguna dengan setidaknya satu hit dalam K rekomendasi}}{\text{Jumlah total pengguna}}
-$$
+HitRate@K = Jumlah pengguna dengan setidaknya satu hit dalam K / Jumlah total pengguna
 * **Cara Kerja:** Metrik ini menjawab pertanyaan dasar: "Berapa banyak pengguna yang berhasil menemukan setidaknya satu rekomendasi yang relevan dalam daftar N teratas mereka?" Ini adalah metrik binary (ya/tidak) per pengguna, yang kemudian dirata-ratakan di seluruh populasi pengguna. Hit Rate@N yang tinggi menunjukkan bahwa sebagian besar pengguna akan mendapatkan pengalaman positif dari sistem, berkontribusi pada peningkatan retensi dan kepuasan pengguna.
 
 6. **Coverage**
 * Formula:
-$$
-\text{Coverage} = \frac{\text{Jumlah item unik yang direkomendasikan}}{\text{Jumlah total item unik dalam katalog}}
-$$
+Coverage = Jumlah item unik yang direkomendasikan / Jumlah total item unik dalam katalog
 * **Cara Kerja:** Metrik ini mengukur seberapa luas sistem rekomendasi dapat merekomendasikan item dari keseluruhan item buku terdaftar. Coverage yang tinggi berarti model tidak hanya merekomendasikan item-item populer saja, tetapi juga mampu "menjangkau" beragam buku. Ini penting untuk mengatasi filter bubble dan meningkatkan eksplorasi pengguna, serta relevan dengan pengembangan sistem rekomendasi berbasis fitur buku.
