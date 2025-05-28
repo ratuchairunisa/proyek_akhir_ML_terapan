@@ -48,7 +48,7 @@ Berdasarkan problem statements, berikut adalah tujuan utama yang ingin dicapai d
 3. Meningkatkan retensi dan kepuasan pengguna pada platform digital yang menyediakan buku.
 4. Mengevaluasi dan membandingkan performa dua pendekatan sistem rekomendasi: content-based filtering dan collaborative filtering.
 
-### 💡 Solution Approach
+### Solution Approach
 
 Untuk mencapai tujuan proyek ini, dua pendekatan sistem rekomendasi akan digunakan, yaitu Content-Based Filtering dan Collaborative Filtering.
 - **Content-Based Filtering**
@@ -116,32 +116,32 @@ Pada tahap persiapan data, beberapa teknik utama yang diterapkan untuk memastika
 **Text Preprocessing (untuk Content-Based Filtering)**: dalam melakukan teks processing, dilakukan beberapa teknik berikut
 
 1. **Lowercasing (Konversi ke huruf kecil):**
-* Mengubah semua huruf menjadi huruf kecil (text.lower()).
-* Tujuan: agar kata seperti "Book" dan "book" dianggap sama (konsistensi kata).
+ * Mengubah semua huruf menjadi huruf kecil (text.lower()).
+ * Tujuan: agar kata seperti "Book" dan "book" dianggap sama (konsistensi kata).
 
 2. **Punctuation Removal (Menghapus tanda baca):**
-* Menghapus semua tanda baca (string.punctuation).
-* Tujuan: tanda baca biasanya tidak memberi makna penting dalam analisis teks (kecuali di NLP tingkat lanjut seperti analisis sentimen berbasis tanda baca).
+ * Menghapus semua tanda baca (string.punctuation).
+ * Tujuan: tanda baca biasanya tidak memberi makna penting dalam analisis teks (kecuali di NLP tingkat lanjut seperti analisis sentimen berbasis tanda baca).
 
 3. **Digit Removal (Menghapus angka):**
-* Menghapus semua angka (re.sub(r'\d+', '', text)).
-* Tujuan: angka umumnya tidak relevan dalam pemahaman makna konten buku, kecuali di domain tertentu.
+ * Menghapus semua angka (re.sub(r'\d+', '', text)).
+ * Tujuan: angka umumnya tidak relevan dalam pemahaman makna konten buku, kecuali di domain tertentu.
 
 4. **Tokenization:**
-* Memecah teks menjadi daftar kata-kata (token) menggunakan nltk.word_tokenize().
-* Tujuan: agar teks bisa diproses secara individual kata demi kata (untuk filtering, stemming, dsb).
+ * Memecah teks menjadi daftar kata-kata (token) menggunakan nltk.word_tokenize().
+ * Tujuan: agar teks bisa diproses secara individual kata demi kata (untuk filtering, stemming, dsb).
 
 5. **Stopword Removal:**
-* Menghapus kata-kata umum yang tidak membawa makna penting (seperti “the”, “is”, “and”) menggunakan stop_words.
-* Tujuan: mengurangi noise atau kata-kata yang tidak berkontribusi pada makna inti dokumen.
+ * Menghapus kata-kata umum yang tidak membawa makna penting (seperti “the”, “is”, “and”) menggunakan stop_words.
+ * Tujuan: mengurangi noise atau kata-kata yang tidak berkontribusi pada makna inti dokumen.
 
 6. **Stemming (Porter Stemmer):**
-* Mengubah kata ke bentuk dasarnya (contoh: reading → read).
-* Tujuan: menyatukan kata dengan akar yang sama agar dianggap satu makna. Ini penting untuk menghindari redundansi kata turunan.
+ * Mengubah kata ke bentuk dasarnya (contoh: reading → read).
+ * Tujuan: menyatukan kata dengan akar yang sama agar dianggap satu makna. Ini penting untuk menghindari redundansi kata turunan.
 
 7. **Rejoining:**
-* Menggabungkan kembali token menjadi satu string (' '.join()).
-* Tujuan: agar data siap digunakan untuk proses selanjutnya, misalnya vectorization.
+ * Menggabungkan kembali token menjadi satu string (' '.join()).
+ * Tujuan: agar data siap digunakan untuk proses selanjutnya, misalnya vectorization.
 
 Semua teknik yang digunakan dalam teks processing ialah untuk untuk menyederhanakan teks, membersihkan noise, mempersiapkan teks untuk pemodelan, dan meningkatkan akurasi model.
 
