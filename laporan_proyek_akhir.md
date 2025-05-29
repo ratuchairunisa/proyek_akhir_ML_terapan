@@ -91,13 +91,13 @@ Dataset ini kaya akan fitur yang dapat dimanfaatkan untuk berbagai teknik rekome
 * **Bar Chart Top 10 Buku**: menampilkan top 10 buku berdasarkan rata-rata rating tertinggi dan ulasan terbanyak
 * **Bar Chart Top 10 author dan genre terpopuler**: untuk mengetahui top 10 penulis dan genre buku paling populer. 
 
-![Top 10 Penulis Terpopuler](image/top_10_fav_authors.png)
+![top_10_fav_authors](https://github.com/user-attachments/assets/398194e7-d4ee-46e2-b6c2-013c33f25241)
 
-![Top 10 Genre Terpopuler](image/top_10_fav_genre.png)
+![top_10_fav_genre](https://github.com/user-attachments/assets/1527901c-7463-4420-b415-9ce418964a28)
 
 * **Word Cloud dari Deskripsi Buku**: dibuat untuk menemukan kata kunci yang sering muncul dalam deskripsi buku.
 
-![Kata-kata yang sering muncul di deskripsi](image/word_cloud.png)
+![word_cloud](https://github.com/user-attachments/assets/f0995ea1-0f95-4255-9d81-976e50fb0566)
 
 ## Data Preparation
 
